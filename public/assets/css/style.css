@@ -1,0 +1,108 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;800;900&display=swap');
+
+:root{
+    --font:'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+
+    --large-weight:900;
+    --small-weight:100;
+    --medium-weight:400;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio, input, select):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+a, button {
+    cursor: revert;
+}
+
+
+ol, ul, nave {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+
+textarea {
+    white-space: revert;
+}
+
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+
+:where(pre) {
+    all: revert;
+}
+
+
+::placeholder {
+    color: unset;
+}
+
+
+::marker {
+    content: initial;
+}
+
+
+:where([hidden]) {
+    display: none;
+}
+
+
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+        line-break: after-white-space;
+    -webkit-user-select: auto;
+        user-select: auto;
+}
+
+
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+
+:where(dialog:modal) {
+    all: revert;
+}
+html{
+    font-family: var(--font);
+    font-size: 62.5%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}

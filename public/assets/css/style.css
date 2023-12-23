@@ -100,9 +100,22 @@ html{
 }
 
 main{
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: rgb(10, 10, 10);
+}
+
+#madara-img{
+    height: 100%;
+    width: 90%;
+}
+
+#madara-gif{
+    display: none;
+    height: 100%;
+    width: 90%;
 }

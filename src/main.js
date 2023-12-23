@@ -1,3 +1,5 @@
+import {processAudio} from './audioFuction'
+
 navigator.mediaDevices.getUserMedia({ audio: true })
     .then(function(stream) {
         const audioContext = new AudioContext();

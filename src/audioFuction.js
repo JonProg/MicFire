@@ -1,4 +1,14 @@
-export function processAudio() {
+export function processAudio(stream){
+    const audioContext = new AudioContext();
+    const analyser = audioContext.createAnalyser();
+    const microphone = audioContext.createMediaStreamSource(stream);
+    microphone.connect(analyser);
+
+    // Configurando a análise de áudio
+    analyser.fftSize = 2048;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
     analyser.getByteTimeDomainData(dataArray);
 
     // Aplicando a transformada de Fourier nos dados de áudio

@@ -25,20 +25,12 @@ navigator.mediaDevices.getUserMedia({
 
   // Função para processar os dados de áudio
   function processAudio() {
-    // Copiando os dados de frequência para dataArray
     analyser.getByteFrequencyData(dataArray);
-
-    // Encontrando a frequência dominante
     var maxFrequency = Math.max.apply(Math, _toConsumableArray(dataArray));
-
-    // Exibindo a frequência dominante no console
-    console.log('Frequência dominante:', maxFrequency);
-
+    console.log(maxFrequency);
     // Chamando a função novamente de forma assíncrona
     setTimeout(processAudio, 100);
   }
-
-  // Chamando a função pela primeira vez
   processAudio();
 })["catch"](function (err) {
   console.error('Erro ao acessar o microfone: ' + err);

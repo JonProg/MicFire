@@ -2,7 +2,6 @@
     <img src="https://i.postimg.cc/G2QCggQ5/Land-of-Fire.png" align="center" width=177px ></img>
 </p> 
 
-<br>
 <h2 align="center">Mic Fire</h2>
 
 <div align="center">

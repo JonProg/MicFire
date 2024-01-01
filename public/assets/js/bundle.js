@@ -9,6 +9,10 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+var image = document.getElementById('madara-img');
+var gif = document.getElementById('madara-gif');
+var isGifDisplayed = false; // Adiciona uma variável para controlar se o GIF está sendo exibido
+
 // Obtendo o áudio do usuário
 navigator.mediaDevices.getUserMedia({
   audio: true
@@ -28,6 +32,20 @@ navigator.mediaDevices.getUserMedia({
     analyser.getByteFrequencyData(dataArray);
     var maxFrequency = Math.max.apply(Math, _toConsumableArray(dataArray));
     console.log(maxFrequency);
+    if (maxFrequency >= 130) {
+      if (!isGifDisplayed) {
+        isGifDisplayed = true;
+        image.style.display = 'none';
+        gif.style.display = 'block';
+        gif.src = gif.src; // Reinicia a animação do GIF
+        setTimeout(function () {
+          gif.style.display = 'none';
+          image.style.display = 'block';
+          isGifDisplayed = false;
+          processAudio(); // Chama a função novamente após o tempo determinado
+        }, 3000);
+      }
+    }
     // Chamando a função novamente de forma assíncrona
     setTimeout(processAudio, 100);
   }

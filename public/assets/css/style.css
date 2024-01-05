@@ -119,3 +119,10 @@ main{
     height: 100%;
     width: 90%;
 }
+
+@media (min-width: 360px) and (max-width: 414px) {
+    #madara-img, #madara-gif{
+      height: 20rem;
+    }
+}
+  

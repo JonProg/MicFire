@@ -32,7 +32,7 @@ navigator.mediaDevices.getUserMedia({
     analyser.getByteFrequencyData(dataArray);
     var maxFrequency = Math.max.apply(Math, _toConsumableArray(dataArray));
     console.log(maxFrequency);
-    if (maxFrequency >= 130) {
+    if (maxFrequency >= 200) {
       if (!isGifDisplayed) {
         isGifDisplayed = true;
         image.style.display = 'none';

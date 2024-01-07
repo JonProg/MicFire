@@ -19,8 +19,6 @@ O projeto utiliza a análise de dados de áudio do microfone do usuário para co
 
 ## Ideias de projetos
 
-#
-
 Essa logica pôde ser integrada em um aplicativo de afinador de instrumentos musicais, onde os músicos podem usar seus dispositivos móveis para afinar seus instrumentos, a precisão vai depender da qualidade do microfone do usuario.
 
 #

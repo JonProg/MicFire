@@ -13,18 +13,14 @@
 
 </div>
 
-#
-
 O projeto utiliza a análise de dados de áudio do microfone do usuário para controlar a exibição de uma imagem e um GIF, proporcionando uma experiência interativa com base na entrada de áudio sendo maior ou igual a 200hz.
 
 ## Ideias de projetos
 
-Essa logica pôde ser integrada em um aplicativo de afinador de instrumentos musicais, onde os músicos podem usar seus dispositivos móveis para afinar seus instrumentos, a precisão vai depender da qualidade do microfone do usuario.
+- Essa logica pôde ser integrada em um aplicativo de afinador de instrumentos musicais, onde os músicos podem usar seus dispositivos móveis para afinar seus instrumentos, a precisão vai depender da qualidade do microfone do usuario.
 
-#
+- Um sistema de segurança que detecta alarmes ou sirenes, ou em aplicativos de reconhecimento de voz que precisam filtrar e reconhecer sons específicos.
 
-Um sistema de segurança que detecta alarmes ou sirenes, ou em aplicativos de reconhecimento de voz que precisam filtrar e reconhecer sons específicos.
 
-#
 
 
